@@ -8,7 +8,7 @@ In this project, we attempt to show the evolution of the two-party system across
 
 
 ## URL
-We’ve heard much from the media of Election 2016, but what does the data say, about the US elections over the history? [Join us](https://ViennaChen.github.io/WPI_DV_Final_Project/index.html) to explore the data stories behind all things election! (Please make sure you are viewing in full screen mode, which is F11 for Windows and shift-command-F for Mac.)
+We’ve heard much from the media of Election 2016, but what does the data say, about the US elections over the history? [Join us](https://ViennaChen.github.io/WPI_DV_Final_Project/index.html) to explore the data stories behind all things election! (Please make sure you are viewing in **full screen mode**, which is F11 for Windows and shift-command-F for Mac.)
 
 
 ## Demo
