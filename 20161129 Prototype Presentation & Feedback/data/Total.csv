@@ -1,0 +1,25 @@
+Year,Color,D_Percen,R_Percen,EV_Total,USA Today,Wall Street Journal,New York Times,Los Angeles Times,Chicago Tribune,Washington Post,Arizona Republic,New York Daily News,Houston Chronicle,New York Post,D_EV,R_EV,I_EV,Keyword
+1920,#a50f15,34.12,60.35,531,,,#08519c,,,,,,,,127,404,0,"Aftermath of World War I, Hostile reaction to Woodrow Wilson (the Democratic president, 1913- 1920)"
+1924,#a50f15,28.82,54.03,531,,,#08519c,,,,,,,,136,382,13,"Booming economic by Warren G. Harding (the Republican president, died in 1923)"
+1928,#a50f15,40.79,58.22,531,,,#08519c,,,,,,,,87,444,0,The Republicans were continiously identified with the booming economy of the 1920s
+1932,#08519c,57.41,39.65,531,,,#08519c,,,,,,,,472,59,0,"1929 Wall Street Crash, the Great Depression"
+1936,#08519c,60.8,36.54,531,,,#08519c,,,,,,,,523,8,0,"The 8th year of the Great Depression, New Deal economic policy was highly popular"
+1940,#08519c,54.72,44.77,531,,,#a50f15,,,,,,,,449,82,0,"World War II, the United States emerged from the Great Depression"
+1944,#08519c,53.39,45.89,531,,,#08519c,,,,,,,,432,99,0,"World War II, Little doubt that Roosevelt run for the 4th term"
+1948,#08519c,49.55,45.07,531,,,#a50f15,,,,,,,,303,189,39,"Great election upset in American history, a Three-way split in Democratic Party"
+1952,#a50f15,44.33,55.18,531,,,#a50f15,,,,,,,,89,442,0,"Cold War, Korean War"
+1956,#a50f15,41.97,57.37,530,,,#a50f15,,,,,,,,73,457,0,"End of Korean War, Economic growth"
+1960,#08519c,49.72,49.55,522,,,#08519c,,,,,,,,311,219,0,The 1st presidential election Alaska and Hawaii participated
+1964,#08519c,61.05,38.47,538,,,#08519c,,,,,,,,486,52,0,"The Assassination of John F. Kennedy (the Democratic president, died in 1963)"
+1968,#a50f15,42.72,43.42,538,,,#08519c,,,,,,,,191,301,46,"The Assassination of Martin Luther King and Robert F. Kennedy, Opposition to the Vietnam War"
+1972,#a50f15,37.52,60.67,538,,,#08519c,,,,,,,,17,520,0,"Good economy, Success in foreign affairs"
+1976,#08519c,50.08,48.01,537,,,#08519c,,,,,,,,297,240,0,"Watergate scandal, Slow economy"
+1980,#a50f15,41.01,50.75,538,#888888,#888888,#08519c,#888888,#a50f15,#08519c,#a50f15,#a50f15,#a50f15,#a50f15,49,489,0,"Iran hostage crisis, Worse economy with high unemployment and inflation"
+1984,#a50f15,40.56,58.77,538,#888888,#888888,#08519c,#888888,#a50f15,#08519c,#a50f15,#a50f15,#a50f15,#a50f15,13,525,0,Strong economic recovery from the deep recession
+1988,#a50f15,45.65,53.37,537,#888888,#888888,#08519c,#888888,#a50f15,#888888,#a50f15,#a50f15,#a50f15,#a50f15,111,426,0,"Good economy, Stable international stage"
+1992,#08519c,43.01,37.45,538,#888888,#888888,#08519c,#888888,#a50f15,#08519c,#a50f15,#08519c,#a50f15,#a50f15,370,168,0,"Economy in recession, the collapse of the Soviet Union, Defeat of Iraq in the Gulf War"
+1996,#08519c,49.23,40.72,538,#888888,#888888,#08519c,#888888,#a50f15,#08519c,#a50f15,#08519c,#a50f15,#a50f15,379,159,0,"Recovered economy, Relatively stable world stage"
+2000,#a50f15,48.38,47.87,537,#888888,#888888,#08519c,#888888,#a50f15,#08519c,#a50f15,#08519c,#a50f15,#a50f15,266,271,0,Controversy over the awarding of Florida's 25 electoral votes
+2004,#a50f15,48.26,50.73,537,#888888,#888888,#08519c,#888888,#a50f15,#08519c,#a50f15,#a50f15,#a50f15,#a50f15,251,286,0,"911 in 2001, War on Terrorism, 2003 invastion of Iraq"
+2008,#08519c,52.86,45.6,538,#888888,#888888,#08519c,#08519c,#08519c,#08519c,#a50f15,#08519c,#08519c,#a50f15,365,173,0,2008 economic crisis
+2012,#08519c,51.01,47.15,538,#888888,#888888,#08519c,#08519c,#08519c,#08519c,#a50f15,#a50f15,#a50f15,#a50f15,332,206,0,Economic recovery and job creation

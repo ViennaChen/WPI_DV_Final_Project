@@ -1,13 +1,246 @@
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<!DOCTYPE html>
 
+<head>
+    <meta charset="utf-8">
+    <title>Final Project</title>
+    <script src="Scripts.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+</head>
 
 <style>
+    .state{
+        fill: none;
+        stroke: #a9a9a9;
+        stroke-width: 1;
+    }
+    .div-wrapper {
+        display: inline-block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 100%;
+        vertical-align: top;
+        overflow: hidden;
+        margin: auto;
+    }
+    .div-wrapper-left {
+        float: left;
+        width: 75%;
+        height: 100%;
+        margin: auto;
+    }
+    .div-wrapper-right {
+        float: left;
+        width: 25%;
+        height: 100%;
+        margin: auto;
+    }
+    .svg-container-timeline {
+        float: left;
+        width: 100%;
+        height: 5%;
+        margin: auto;
+    }
+    .svg-container-map {
+        float: left;
+        width: 70%;
+        height: 45%;
+        margin: auto;
+        text-align: center;
+    }
+    .svg-container-story-media {
+        float: left;
+        width: 30%;
+        height: 45%;
+        margin: auto;
+    }
+    .svg-container-gdp-emp {
+        float: left;
+        width: 100%;
+        height: 30%;
+        margin: auto;
+    }
+    .svg-container-stack {
+        float: left;
+        width: 100%;
+        height: 20%;
+        margin: auto;
+    }
+    .svg-container-shift {
+        float: left;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+    .axis {
+  	  font: 0.6em sans-serif;
+  	}
+  	.axis path, .axis line {
+  	  fill: none;
+  	  stroke: #000;
+  	  shape-rendering: crispEdges;
+  	}
+    #tooltip {
+        position: absolute;
+        text-align: center;
+        padding: 20px;
+        margin: 10px;
+        font: 12px sans-serif;
+        background: lightsteelblue;
+        border: 1px;
+        border-radius: 2px;
+        pointer-events: none;
+    }
+    #tooltip h4{
+        margin:0;
+        font-size:14px;
+    }
+    #tooltip {
+        background:rgba(0,0,0,0.9);
+        border:1px solid grey;
+        border-radius:5px;
+        font-size:12px;
+        width:auto;
+        padding:4px;
+        color:white;
+        opacity:0;
+    }
+    #tooltip table{
+        table-layout:fixed;
+    }
+    #tooltip tr td{
+        padding:0;
+        margin:0;
+    }
+    #tooltip tr td:nth-child(1){
+        width:100px;
+    }
+    #tooltip tr td:nth-child(2){
+        text-align:center;
+    }
 </style>
 
 <body>
-  <h1> Final Project </h1>
+    <div id="wrapper" class="div-wrapper">
+        <div id="wrapper-left" class="div-wrapper-left">
+            <div id="div-timeline" class="svg-container-timeline"></div>
+            <div id="div-map" class="svg-container-map"></div>
+            <div id="div-story-media" class="svg-container-story-media"></div>
+            <div id="div-gdp-emp" class="svg-container-gdp-emp"></div>
+            <div id="div-stack" class="svg-container-stack"></div>
+        </div>
+        <div id="wrapper-right" class="div-wrapper-right">
+            <div id="div-shift" class="svg-container-shift"></div>
+        </div>
+        <div id="tooltip"></div>
+    </div>
 </body>
 
 <script>
-  console.log(d3); // test if d3 is loaded
+    var svgTimeline = d3.select("#div-timeline")
+                    .append("svg")
+                    .attr("id", "timeline")
+                    .attr("width", "100%")
+                    .attr("viewBox", "0 0 750 30");
+
+    var svgMap = d3.select("#div-map")
+                    .append("svg")
+                    .attr("id", "map")
+                    .attr("preserveAspectRatio", "xMidYMid")
+                    .attr("width", "80%")
+                    .attr("viewBox", "0 0 960 600");
+
+    var svgStoryTitle = d3.select("#div-story-media")
+                    .append("svg")
+                    .attr("id", "storyTitle")
+                    .attr("width", "100%")
+                    .attr("height", "10%")
+                    .attr("viewBox", "0 0 300 10");
+
+    var svgStory = d3.select("#div-story-media")
+                    .append("svg")
+                    .attr("id", "story")
+                    .attr("width", "100%")
+                    .attr("height", "25%")
+                    .attr("viewBox", "0 0 300 50");
+
+    var svgMedia = d3.select("#div-story-media")
+                    .append("svg")
+                    .attr("id", "media")
+                    .attr("width", "100%")
+                    .attr("viewBox", "0 0 300 200");
+
+    var svgLineGDP = d3.select("#div-gdp-emp")
+                    .append("svg")
+                    .attr("id", "lineGDP")
+                    .attr("width", "100%")
+                    .attr("viewBox", "0 0 750 80");
+
+    var svgLineEmp = d3.select("#div-gdp-emp")
+                    .append("svg")
+                    .attr("id", "lineEmp")
+                    .attr("width", "100%")
+                    .attr("viewBox", "0 0 750 80");
+
+    var svgLineYear = d3.select("#div-gdp-emp")
+                    .append("svg")
+                    .attr("id", "lineYear")
+                    .attr("width", "100%")
+                    .attr("viewBox", "0 0 750 15");
+
+    var svgInfoUsaD = d3.select("#div-stack")
+                    .append("svg")
+                    .attr("id", "infoUsaD")
+                    .attr("width", "50%")
+                    .attr("viewBox", "0 0 375 50");
+
+    var svgInfoUsaR = d3.select("#div-stack")
+                    .append("svg")
+                    .attr("id", "infoUsaR")
+                    .attr("width", "50%")
+                    .attr("viewBox", "0 0 375 50");
+
+    var svgStackEV = d3.select("#div-stack")
+                    .append("svg")
+                    .attr("id", "stackEV")
+                    .attr("class", "svg-stackEV")
+                    .attr("width", "95%")
+                    .attr("viewBox", "0 0 800 40");
+
+    var svgStackEVtag = d3.select("#div-stack")
+                    .append("svg")
+                    .attr("id", "stackEVtag")
+                    .attr("class", "svg-stackEV-tag")
+                    .attr("width", "5%")
+                    .attr("viewBox", "0 0 50 50");
+
+    var svgStackPV = d3.select("#div-stack")
+                    .append("svg")
+                    .attr("id", "stackPV")
+                    .attr("class", "svg-stackPV")
+                    .attr("width", "95%")
+                    .attr("viewBox", "0 0 800 40");
+
+    var svgStackPVtag = d3.select("#div-stack")
+                    .append("svg")
+                    .attr("id", "stackPVtag")
+                    .attr("class", "svg-stackPV-tag")
+                    .attr("width", "5%")
+                    .attr("viewBox", "0 0 50 50");
+
+    var svgShiftTitle = d3.select("#div-shift")
+                            .append("svg")
+                            .attr("id", "shiftTitle")
+                            .attr("width", "100%")
+                            .attr("viewBox", "0 0 250 30");
+
+    var svgShiftState = d3.select("#div-shift")
+                            .append("svg")
+                            .attr("id", "shiftState")
+                            .attr("width", "100%")
+                            .attr("height", "90%")
+                            //.attr("viewBox", "0 0 250 575");
+
+    run();
+
 </script>
