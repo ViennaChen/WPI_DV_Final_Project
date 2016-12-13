@@ -8,11 +8,11 @@ In this project, we attempt to show the evolution of the two-party system across
 
 
 ## URL
-We’ve heard much from the media of Election 2016, but what does the data say, about the US elections over the history? [Join us](https://viennachen.github.io/WPI_DV_Final_Project/) to explore the data stories behind all things election! (Please make sure to view the vis in **full screen mode**, which is F11 for Windows and shift-command-F for Mac)
+We’ve heard much from the media of Election 2016, but what does the data say, about the US elections over the history? [Join us](https://ViennaChen.github.io/WPI_DV_Final_Project/index.html) to explore the data stories behind all things election! 
 
 
 ## Demo
-We create a two minute screen-cast with narration showing a [Demo](viz_demo_record.mov) of our visualization.
+We create a two minute screen-cast with narration showing a demo of your visualization. Please find viz_demo_record in this repository.
 
 
 ## Description
@@ -27,7 +27,7 @@ We create a two minute screen-cast with narration showing a [Demo](viz_demo_reco
 
   * [Dave Leip's Atlas of U.S. Presidential Elections](http://uselectionatlas.org/), which is our main data source that includes the voting statistics for every election by state level
   * [American Presidency Project: Presidential Election Data](http://www.presidency.ucsb.edu/elections.php), from which we grabbed the GDP data
-  * [Labor Force Statistics from the Current Population Survey](http://data.bls.gov/pdq/SurveyOutputServlet),from which we obtained the unemployment rate data
+  * [Labor Force Statistics from the Current Population Survey](http://data.bls.gov/timeseries/LNS14000000),from which we obtained the unemployment rate data
   * [Newspaper presidential endorsements](http://noahveltman.com/endorsements/), where we excerpted the endorsement of top 10 US newspapers (by circulation)
 
 
